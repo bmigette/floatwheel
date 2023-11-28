@@ -17,13 +17,13 @@ static void lcmConfigReset(void)
 
 /**************************************************
  * @brie   :KEY1_Task()
- * @note   :KEY1ÈÎÎñ
- * @param  :ÎÞ
- * @retval :ÎÞ
+ * @note   :KEY1ï¿½ï¿½ï¿½ï¿½
+ * @param  :ï¿½ï¿½
+ * @retval :ï¿½ï¿½
  **************************************************/
 void KEY1_Task(void)
 {
-	if(KEY1_State == 0)// || Power_Flag == 3)  //³äµçÆ÷¹©µç°´¼ü²»Æð×÷ÓÃ
+	if(KEY1_State == 0)// || Power_Flag == 3)  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç°´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	{
 		return;
 	}
@@ -331,9 +331,9 @@ static void WS2812_Handtest(void)
 
 /**************************************************
  * @brie   :WS2812_Task()
- * @note   :WS2812ÈÎÎñ 
- * @param  :ÎÞ
- * @retval :ÎÞ
+ * @note   :WS2812ï¿½ï¿½ï¿½ï¿½ 
+ * @param  :ï¿½ï¿½
+ * @retval :ï¿½ï¿½
  **************************************************/
 void WS2812_Task(void)
 {
@@ -396,15 +396,15 @@ void WS2812_Task(void)
 	}
 	else switch(Gear_Position)
 	{
-		case 1: //1µ²
+		case 1: //1ï¿½ï¿½
 			WS2812_Measure = WS2812_1_BRIGHTNESS;
 		break;
 		
-		case 2:	//2µ²
+		case 2:	//2ï¿½ï¿½
 			WS2812_Measure = WS2812_2_BRIGHTNESS;
 		break;
 		
-		case 3: //3µ²
+		case 3: //3ï¿½ï¿½
 			WS2812_Measure = WS2812_3_BRIGHTNESS;
 		break;
 		
@@ -437,13 +437,13 @@ void WS2812_Task(void)
 
 /**************************************************
  * @brie   :Power_Task()
- * @note   :µçÔ´ÈÎÎñ 
- * @param  :ÎÞ
- * @retval :ÎÞ
+ * @note   :ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ 
+ * @param  :ï¿½ï¿½
+ * @retval :ï¿½ï¿½
  **************************************************/
 void Power_Task(void)
 {
-	static uint8_t power_flag_last = 0; //ÉÏÒ»´ÎµÄ×´Ì¬
+	static uint8_t power_flag_last = 0; //ï¿½ï¿½Ò»ï¿½Îµï¿½×´Ì¬
 	static uint8_t power_step = 0;
 
 	if (Power_Flag == 4) {
@@ -616,7 +616,7 @@ void Charge_Task(void)
 		break;
 		
 		case 1:
-			if(Charge_Time > 1000)  //ÑÓÊ±1S
+			if(Charge_Time > 1000)  //ï¿½ï¿½Ê±1S
 			{
 				charge_step = 2;
 			}
@@ -740,25 +740,25 @@ void Headlights_Task(void)
 
 /**************************************************
  * @brie   :Buzzer_Task()
- * @note   :·äÃùÆ÷ÈÎÎñ 
- * @param  :ÎÞ
- * @retval :ÎÞ
+ * @note   :ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+ * @param  :ï¿½ï¿½
+ * @retval :ï¿½ï¿½
  **************************************************/
 void Buzzer_Task(void)
 {
 	static uint8_t buzzer_step = 0;
-	static uint8_t gear_position_last = 0; //ÉÏÒ»´ÎµÄµµÎ»
+	static uint8_t gear_position_last = 0; //ï¿½ï¿½Ò»ï¿½ÎµÄµï¿½Î»
 	static uint8_t ring_frequency = 0;
 	static uint16_t sound_frequency = 0;
 	
-	if(Power_Flag != 2 || Buzzer_Flag == 1) //VESC¶Ïµç»ò·äÃùÆ÷¹Ø±Õ 
+	if(Power_Flag != 2 || Buzzer_Flag == 1) //VESCï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½ 
 	{
 		BUZZER_OFF;
 		buzzer_step = 0;
 		return;
 	}
 	
-	if(Buzzer_Frequency == 0 && gear_position_last == Gear_Position) //·äÃùÆ÷ÏìµÄÆµÂÊÎª0»òÉÏÒ»´ÎµÄµµÎ»µÈÓÚÕâ´ÎµÄµµÎ»
+	if(Buzzer_Frequency == 0 && gear_position_last == Gear_Position) //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ÎµÄµï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎµÄµï¿½Î»
 	{
 		BUZZER_OFF;
 		buzzer_step = 0;
@@ -829,9 +829,9 @@ void Buzzer_Task(void)
 
 /**************************************************
  * @brie   :Usart_Task()
- * @note   :´®¿ÚÈÎÎñ 
- * @param  :ÎÞ
- * @retval :ÎÞ
+ * @note   :ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+ * @param  :ï¿½ï¿½
+ * @retval :ï¿½ï¿½
  **************************************************/
 void Usart_Task(void)
 {

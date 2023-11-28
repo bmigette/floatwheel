@@ -1,14 +1,21 @@
 #ifndef __WS2812_H
 #define __WS2812_H
 
+#ifndef test
+
 #include "hk32f030m.h"
 #include "spi.h"
+
+#else
+#include <stdint.h>
+#endif
+
 #include "io_ws2812.h"
 
-#define     WS2812_N    10      	//µÆÖéÊýÁ¿
-#define		WS2812_0	0xE0  	//0Âë
-#define		WS2812_1	0xFF 	//1Âë
-#define		WS2812_R	0x00  	//¸´Î»Âë
+#define     WS2812_N    10      	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define		WS2812_0	0xE0  	//0ï¿½ï¿½
+#define		WS2812_1	0xFF 	//1ï¿½ï¿½
+#define		WS2812_R	0x00  	//ï¿½ï¿½Î»ï¿½ï¿½
 
 extern uint16_t WS2812_Counter;
 extern uint8_t WS2812_Buff[WS2812_N][24];

@@ -3,13 +3,12 @@
 
 
 
+#include "flag_bit.h"
+#include "power.h"
 #include "led.h"
-#include "key.h"
-#include "vesc_uasrt.h"
-
 
 #include "ws2812.h"
-#include "flag_bit.h"
+
 
 
 #define	  CHARGING_VOLTAGE	  		40
@@ -29,17 +28,13 @@
 #define   DETECTION_SWITCH_TIME     500
 #define   CHARGER_DETECTION_DELAY	1000
 
-void LED_Task(void);
-void KEY1_Task(void);
-void WS2812_Task(void);
+uint8_t errCode; //this is normally in vest uart
+
+
 void Power_Task(void);
 void Charge_Task(void);
-void Headlights_Task(void);
-void Buzzer_Task(void);
-void Usart_Task(void);
-void ADC_Task(void);
-void VESC_State_Task(void);
-void Flashlight_Detection(void);
+void WS2812_Power_Display(uint8_t brightness); 
+void WS2812_Charge(void);
 
 #endif
 
