@@ -1,3 +1,18 @@
 {
-    "C_Cpp.clang_format_fallbackStyle": "Google"
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "files.associations": {
+        "test.h": "c",
+        "hk32f030m.h": "c",
+        "adc.h": "c",
+        "power.h": "c",
+        "led.h": "c",
+        "vesc_uasrt.h": "c",
+        "spi.h": "c",
+        "io_ws2812.h": "c",
+        "stdio.h": "c",
+        "ws2812.h": "c",
+        "stdint.h": "c",
+        "task.h": "c",
+        "flag_bit.h": "c"
+    }
 }
