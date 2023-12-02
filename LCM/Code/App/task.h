@@ -1,16 +1,11 @@
 #ifndef __TASK_H
 #define __TASK_H
 
-
-
 #include "led.h"
 #include "key.h"
-#include "vesc_uasrt.h"
-
-
 #include "ws2812.h"
 #include "flag_bit.h"
-
+#include "vesc_uasrt.h"
 
 #define	  CHARGING_VOLTAGE	  		40
 #define   BATTERY_STRING      		20
